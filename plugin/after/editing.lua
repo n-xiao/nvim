@@ -1,15 +1,16 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.numberwidth = 4
-vim.opt.cursorline = true
-vim.opt.cursorlineopt = "number"
+vim.opt.cursorline = true -- makes current line orange
+vim.opt.cursorlineopt = "number" -- only shows selected line
 
 vim.opt.clipboard = "unnamedplus" -- use sys clipboard
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.expandtab = true -- use space instead of tab
 
+-- indent-blankline config
 local scope_line = "│"
 
 local ibl_opts = {
@@ -22,15 +23,3 @@ local ibl_opts = {
 }
 
 require("ibl").setup(ibl_opts)
-
-vim.api.nvim_create_autocmd("User", {
-    callback = function()
-        local indent_opts = {
-            symbol = scope_line,
-        }
-
-        require("mini.indentscope").setup(indent_opts)
-        require("statusbar")
-    end,
-    pattern = "AlphaClosed",
-})

@@ -1,3 +1,4 @@
+-- runs at end of init.lua
 require("nvim-treesitter.configs").setup({ highlight = { enable = true } })
 
 vim.cmd([[

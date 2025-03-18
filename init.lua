@@ -20,7 +20,7 @@ Plug("mfussenegger/nvim-jdtls") -- special because java
 
 Plug("natecraddock/workspaces.nvim")
 Plug("nvim-lua/plenary.nvim")
-Plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.8" })
+Plug("nvim-telescope/telescope.nvim", { ["branch"] = "0.1.8" })
 
 Plug("nvim-tree/nvim-web-devicons")
 

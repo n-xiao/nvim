@@ -5,11 +5,7 @@ vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>ff", telescope_builtin.find_files, { desc = "Telescope find files" })
 vim.keymap.set("n", "<leader>jj", telescope.extensions.workspaces.workspaces, { desc = "Telescope find workspaces" })
-vim.keymap.set("n", "<leader>jf", vim.cmd.Ex)
-vim.keymap.set("n", "K", "<C-u>zz", { silent = true })
-vim.keymap.set("n", "J", "<C-d>zz", { silent = true })
-vim.keymap.set("n", "[m", "[mzz", { silent = true, noremap = true })
-vim.keymap.set("n", "]m", "]mzz", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>m", telescope_builtin.lsp_document_symbols, { desc = "Telescope list doc symbols" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     desc = "LSP actions",

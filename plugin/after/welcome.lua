@@ -42,3 +42,17 @@ alpha.setup(dashboard.opts)
 vim.cmd([[
     autocmd FileType alpha setlocal nofoldenable
 ]])
+
+-- disable mini.indentscope at welcome screen
+local scope_line = "│"
+vim.api.nvim_create_autocmd("User", {
+    callback = function()
+        local indent_opts = {
+            symbol = scope_line,
+        }
+
+        require("mini.indentscope").setup(indent_opts)
+        require("statusbar")
+    end,
+    pattern = "AlphaClosed",
+})
