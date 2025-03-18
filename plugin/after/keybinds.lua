@@ -1,11 +1,8 @@
-local telescope_builtin = require("telescope.builtin")
-local telescope = require("telescope")
-
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>ff", telescope_builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>jj", telescope.extensions.workspaces.workspaces, { desc = "Telescope find workspaces" })
-vim.keymap.set("n", "<leader>m", telescope_builtin.lsp_document_symbols, { desc = "Telescope list doc symbols" })
+vim.keymap.set("n", "<leader>jf", vim.cmd.Ex)
+vim.keymap.set("n", "K", "<C-u>zz", { silent = true })
+vim.keymap.set("n", "J", "<C-d>zz", { silent = true })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     desc = "LSP actions",
