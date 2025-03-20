@@ -61,6 +61,9 @@ local config = {
             completion = { guessMethodArguments = true },
             signatureHelp = { enabled = true },
         },
+        format = {
+            enabled = false,
+        },
     },
 
     -- Language server `initializationOptions`

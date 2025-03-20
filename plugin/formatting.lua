@@ -6,7 +6,7 @@ require("formatter").setup({
     log_level = vim.log.levels.WARN,
     filetype = {
         lua = {
-            require("formatter.filetypes.lua").stylua,
+            -- require("formatter.filetypes.lua").stylua,
             function()
                 return {
                     exe = "stylua",
@@ -23,7 +23,16 @@ require("formatter").setup({
             end,
         },
         java = {
-            require("formatter.filetypes.java").google_java_format,
+            function()
+                return {
+                    exe = "clang-format",
+                    args = {
+                        "--assume-filename=.java",
+                        [[-style="{BasedOnStyle: Google, IndentWidth: 4, PenaltyBreakComment: 0}"]],
+                    },
+                    stdin = true,
+                }
+            end,
         },
         json = {
             require("formatter.filetypes.json").prettierd,
