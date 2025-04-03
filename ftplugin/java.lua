@@ -10,7 +10,7 @@ local config = {
     -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
     cmd = {
         -- 💀
-        "java", -- or '/path/to/java21_or_newer/bin/java'
+        "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/bin/java", -- or '/path/to/java21_or_newer/bin/java'
         -- depends on if `java` is in your $PATH env variable and if it points to the right version.
 
         "-Declipse.application=org.eclipse.jdt.ls.core.id1",

@@ -37,6 +37,8 @@ Plug("windwp/nvim-autopairs")
 Plug("goolord/alpha-nvim")
 Plug("nvim-lualine/lualine.nvim")
 
+Plug("lervag/vimtex", { ["branch"] = "2.16" })
+
 vim.call("plug#end")
 
 require("startup")
